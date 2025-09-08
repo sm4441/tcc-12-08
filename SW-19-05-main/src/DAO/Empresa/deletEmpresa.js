@@ -1,6 +1,8 @@
 const {conexao} = require('../conexao.js')
 
 async function deletarEmpresa(id){
+
+    cost sql = 'DELETE FROM tbl_empresa WHERE id = ?'
     
     const sql = `DELETE FROM tbl_empresa WHERE id = ?`
     const conn = await conexao()
@@ -15,5 +17,6 @@ async function deletarEmpresa(id){
         return err.message
       }
 }
+
 
 module.exports = {deletarEmpresa}
