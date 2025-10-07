@@ -2,9 +2,9 @@ const {conexao} = require('../conexao.js')
 
 async function deletarEmpresa(id){
 
-    cost sql = 'DELETE FROM tbl_empresa WHERE id = ?'
+    let sql = 'DELETE FROM tbl_empresa WHERE id = ?'
     
-    const sql = `DELETE FROM tbl_empresa WHERE id = ?`
+    sql = `DELETE FROM tbl_empresa WHERE id = ?`
     const conn = await conexao()
     
     try {
